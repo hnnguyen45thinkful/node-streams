@@ -1,12 +1,12 @@
 // Try It!
 // Create your own examples of a Readable, Writable, and Transform streams (which implement the _transform method to read a chunk and push new data). For example, your readable stream could produce a list of random numbers. Your transform stream could filter out the numbers which are less than 100. And your writable stream could print the numbers to the console.
-var Random = require('./random')
-var Filter = require('./filter')
-var Printer = require('./printer')
+var Read = require('./read')
+var Write = require('./write')
+var Trans = require('./trans')
 
-var random = new Random()
-var filter = new Filter()
-var printer = new Printer()
+var read = new Read()
+var write = new Write()
+var trans = new Trans()
 
 
-random.pipe(filter).pipe(printer)
+read.pipe(write).pipe(trans)
